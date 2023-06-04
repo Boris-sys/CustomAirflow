@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag boris25/customairflow:$(date +%s)
+      run: docker build . --file Dockerfile --tag boris25/customairflow:latest
     - name: Docker Push
-      run: docker push -a boris25/customairflow:$(date +%s)
+      run: docker push boris25/customairflow:latest
