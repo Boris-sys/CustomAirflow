@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag boris25/customairflow:$(date +%s)
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/customairflow
+      run: docker push boris25/customairflow
